@@ -29,7 +29,6 @@ module.exports = {
     });
     helpEmbed.addField(`**Links**`, `**[Support Server](${support_server || "https://discord.gg/4pUbjscCmA"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot)**`)
 
-    helpEmbed.setTimestamp();
 
     return message.channel.send(helpEmbed).catch(console.error);
   }
