@@ -87,13 +87,14 @@ module.exports = {
     try {
       var playingMessage = await queue.textChannel.send(
         new MessageEmbed()
+        .setAuthor("Music is playing", "https://cdn.discordapp.com/attachments/865859167557255178/897552744402026556/undefined_-_Imgur.gif")
         .setTitle("Now Playing")
         .setURL(`${song.url}`)
         .setThumbnail(message.author.displayAvatarURL({ format: "png" }))
         .setDescription(i18n.__mf("play.startedPlaying", { title: song.title}))
         .setFooter(`Requested by ${message.author.username}`)
         .setColor("RANDOM")
-        .setTimestamp("created by Sobhan.SRZA#2153")
+        .setTimestamp()
       );
       await playingMessage.react("⏭");
       await playingMessage.react("⏯");
