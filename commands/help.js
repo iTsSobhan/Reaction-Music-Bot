@@ -13,13 +13,12 @@ module.exports = {
     let commands = message.client.commands.array();
 
     let helpEmbed = new MessageEmbed()
-      .setAuthor(`${message.client.user.username}`, `${message.client.user.displayAvatarURL({ format: "png" })}`)
+      .setAuthor(`Requested by ${message.author.username}`, `${message.client.user.displayAvatarURL()}`)
       .setTitle(i18n.__mf("help.embedTitle", { botname: message.client.user.username }))
       .setThumbnail(message.client.user.displayAvatarURL({ format: "png" }))
       .setDescription(i18n.__("help.embedDescription"))
       .setColor("RANDOM")
-      .setFooter(`To get info of each command you can do ${message.client.prefix}help | Create by Sobhan.SRZA#2153`);
-
+      .setFooter(`To get info of each command you can do ${message.client.prefix}help | Create by Sobhan.SRZA#2153 :)`);
     commands.forEach((cmd) => {
       helpEmbed.addField(
         `**${message.client.prefix}${cmd.name}**`,
