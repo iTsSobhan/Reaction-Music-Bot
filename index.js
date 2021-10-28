@@ -62,6 +62,14 @@ client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
   client.user.setActivity(`${PREFIX}play`, { type: "PLAYING" }) //can be LISTENING, WATCHING, PLAYING, STREAMING
 });
+client.on("ready", () => {
+  function YousamPower() {
+    let hungry = [`${PREFIX}play` , `${PREFIX}help` ]
+    let Power = Math.floor(Math.random() * hungry.length);
+    client.user.setActivity(hungry[Power], {type: "PLAYING"});//can be LISTENING, WATCHING, PLAYING, STREAMING
+  }; setInterval(YousamPower, 7000)
+    client.user.setStatus("dnd")//can be invesible, online, idle, dnd
+});
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
 
