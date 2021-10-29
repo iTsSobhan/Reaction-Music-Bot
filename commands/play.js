@@ -46,6 +46,7 @@ module.exports = {
     } else if (scdl.isValidUrl(url) && url.includes("/sets/")) {
       return message.client.commands.get("playlist").execute(message, args);
     }
+                                  message.react("▶")
 
     if (mobileScRegex.test(url)) {
       try {
@@ -54,7 +55,6 @@ module.exports = {
             return message.client.commands.get("play").execute(message, [res.headers.location]);
           } else {
             return message.reply("No content could be found at that url.").catch(console.error);
-                              message.react("✔")
 
           }
         });
