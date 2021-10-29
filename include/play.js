@@ -75,6 +75,7 @@ module.exports = {
           // Recursively play the next song
           queue.songs.shift();
           module.exports.play(queue.songs[0], message);
+            module.exports.play(queue.songs[0].image);
         }
       })
       .on("error", (err) => {
@@ -90,7 +91,7 @@ module.exports = {
         .setAuthor("Music is playing", "https://cdn.discordapp.com/attachments/865859167557255178/897552744402026556/undefined_-_Imgur.gif")
         .setTitle("Now Playing")
         .setURL(`${song.url}`)
-        .setThumbnail(message.author.displayAvatarURL({ format: "png" }))
+        .setThumbnail(message.client.user.displayAvatarURL({ format: "png" }))
         .setDescription(i18n.__mf("play.startedPlaying", { title: song.title}))
         .setFooter(`Requested by ${message.author.username}`,`${message.author.displayAvatarURL()}`)
         .setColor("RANDOM")
