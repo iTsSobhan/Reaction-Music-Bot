@@ -9,15 +9,15 @@ module.exports = {
   description: i18n.__('invite.description'),
   execute(message, args) {
     //set the permissions id here (https://discordapi.com/permissions.html)
-    var permissions = 70282305;
+    var permissions = 412353895745;
 
     let invite = new MessageEmbed()
-      .setTitle(`**Interested by the functions of our bot**`)
+      .setTitle(`**Ba Invite Bot Be Servert Azash Hemaiat Kon☺**`)
       .setDescription(
-        `**Then what are you waiting for? Invite me today!** \n\n [Invite Link](https://discord.com/oauth2/authorize?client_id=887338938002472971&permissions=412353895745&scope=bot)`
+        `**Montazer chi hasti🤨? Bodo mano be servert add kon🙂😘** \n\n [Invite Link](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot)`
       )
       .setURL(
-        `https://discord.com/oauth2/authorize?client_id=887338938002472971&permissions=412353895745&scope=bot`
+`https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot`
       )
       .setColor("RANDOM");
     return message.channel.send(invite);
