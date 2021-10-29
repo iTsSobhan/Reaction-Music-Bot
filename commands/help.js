@@ -13,7 +13,7 @@ module.exports = {
     let commands = message.client.commands.array();
 
     let helpEmbed = new MessageEmbed()
-      .setAuthor(`Requested by ${message.author.username}`, `${message.client.user.displayAvatarURL()}`)
+      .setAuthor(`Requested by ${message.author.username}`, `${message.author.displayAvatarURL()}`)
       .setTitle(i18n.__mf("help.embedTitle", { botname: message.client.user.username }))
       .setThumbnail(message.client.user.displayAvatarURL({ format: "png" }))
       .setDescription(i18n.__("help.embedDescription"))
