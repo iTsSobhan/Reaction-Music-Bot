@@ -59,10 +59,6 @@ i18n.configure({
  * Client Events
  */
 client.on("ready", () => {
-  console.log(`${client.user.username} ready!`);
-  client.user.setActivity(`${PREFIX}play`, { type: "PLAYING" }) //can be LISTENING, WATCHING, PLAYING, STREAMING
-});
-client.on("ready", () => {
   function YousamPower() {
     let hungry = [`${PREFIX}play` , `${PREFIX}help` ]
     let Power = Math.floor(Math.random() * hungry.length);
