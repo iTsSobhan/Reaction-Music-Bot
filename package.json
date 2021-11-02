@@ -1,13 +1,13 @@
 {
-  "name": "admusicbot",
+  "name": "sizar team",
   "version": "2.0.0",
   "description": "Discord music bot built with discord.js",
   "main": "index.js",
   "author": "Felix_PlaYz",
   "private": true,
-  "homepage": "https://github.com/gtagamermods/admusicbot",
-  "repository": "github:gtagamermods/admusicbot",
-  "bugs": "https://github.com/gtagamermods/admusicbot/issues",
+  "homepage": "https://github.com/Sobhan-SRZA/Reaction-Music-Bot",
+  "repository": "github:Sobhan-SRZA/Reaction-Music-Bot",
+  "bugs": "https://github.com/Sobhan-SRZA/Reaction-Music-Bot",
   "engines": {
     "node": ">=12.0.0"
   },
