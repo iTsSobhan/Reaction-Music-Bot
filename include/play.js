@@ -27,7 +27,7 @@ module.exports = {
         if (queue.connection.dispatcher && message.guild.me.voice.channel) return;
         queue.channel.leave();
         queue.textChannel.send(i18n.__("play.leaveChannel"));
-      }, STAY_TIME * 1);
+      }, STAY_TIME * 3);
       queue.textChannel.send(i18n.__("play.queueEnded")).catch(console.error);
       return message.client.queue.delete(message.guild.id);
     }
@@ -75,7 +75,6 @@ module.exports = {
           // Recursively play the next song
           queue.songs.shift();
           module.exports.play(queue.songs[0], message);
-            module.exports.play(queue.songs[0].image);
         }
       })
       .on("error", (err) => {
@@ -122,9 +121,9 @@ module.exports = {
           queue.playing = true;
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return i18n.__("common.errorNotChannel");
-          queue.connection.dispatcher.end();
+          queue.connection.dispatcher.end(true);
           queue.textChannel.send(i18n.__mf("play.skipSong", { author: user })).catch(console.error);
-          collector.stop();
+          collector.stop(true);
           break;
 
         case "⏯":
@@ -202,9 +201,9 @@ module.exports = {
             queue.connection.dispatcher.end(true);
           } catch (error) {
             console.error(error);
-            queue.connection.disconnect(true);
+            queue.connection.disconnect();
           }
-          collector.stop();
+          collector.stop(true);
           break;
 
         default:
@@ -214,9 +213,9 @@ module.exports = {
     });
 
     collector.on("end", () => {
-      playingMessage.reactions.removeAll().catch(console.error);
+      playingMessage.reactions.removeAll(true).catch(console.error);
       if (PRUNING && playingMessage && !playingMessage.deleted) {
-        playingMessage.delete({ timeout: 3000 }).catch(console.error);
+        playingMessage.delete({ timeout: 1000 }).catch(console.error);
       }
     })
   }
