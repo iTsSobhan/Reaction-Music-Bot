@@ -125,3 +125,11 @@ client.on("message", async (message) => {
     message.reply(i18n.__("common.errorCommend")).catch(console.error);
   }
 });
+
+//command serverlist ;) این جایزه کسیه که از این سورس استفاده کرده
+client.on('message', message => {
+  if (message.content === `${PREFIX}serverlist`) { 
+    const Guilds = client.guilds.cache.array().map((G, I) => `${I + 1}. **${G.name}** - **${G.id}**`).join("\n");
+    if (!Guilds) return message.channel.send("No Guild");
+    return message.channel.send(Guilds, { split: { char: "\n" } }); }
+});
