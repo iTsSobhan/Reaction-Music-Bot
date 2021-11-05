@@ -32,6 +32,7 @@ module.exports = {
     const permissions = channel.permissionsFor(message.client.user);
     if (!permissions.has("CONNECT")) return message.reply(i18n.__("play.missingPermissionConnect"));
     if (!permissions.has("SPEAK")) return message.reply(i18n.__("play.missingPermissionSpeak"));
+
     const search = args.join(" ");
     const videoPattern = /^(https?:\/\/)?(www\.)?(m\.)?(youtube\.com|youtu\.?be)\/.+$/gi;
     const playlistPattern = /^.*(list=)([^#\&\?]*).*/gi;
@@ -46,7 +47,6 @@ module.exports = {
     } else if (scdl.isValidUrl(url) && url.includes("/sets/")) {
       return message.client.commands.get("playlist").execute(message, args);
     }
-                                  message.react("▶")
 
     if (mobileScRegex.test(url)) {
       try {
@@ -55,7 +55,6 @@ module.exports = {
             return message.client.commands.get("play").execute(message, [res.headers.location]);
           } else {
             return message.reply("No content could be found at that url.").catch(console.error);
-
           }
         });
       } catch (error) {
@@ -142,7 +141,6 @@ module.exports = {
       message.client.queue.delete(message.guild.id);
       await channel.leave();
       return message.channel.send(i18n.__('play.cantJoinChannel', {error: error})).catch(console.error);
-
     }
   }
 };
