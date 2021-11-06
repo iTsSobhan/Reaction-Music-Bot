@@ -1,9 +1,9 @@
 {
-  "name": "sizar team",
+  "name": "Sizar Team Reaction Music Bot",
   "version": "2.0.0",
-  "description": "Discord music bot built with discord.js",
+  "description": "Discord reaction music bot built with discord.js",
   "main": "index.js",
-  "author": "Felix_PlaYz",
+  "author": "Soby-SizarTeam",
   "private": true,
   "homepage": "https://github.com/Sobhan-SRZA/Reaction-Music-Bot",
   "repository": "github:Sobhan-SRZA/Reaction-Music-Bot",
