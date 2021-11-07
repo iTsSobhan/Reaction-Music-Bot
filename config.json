@@ -3,7 +3,7 @@
   "SOUNDCLOUD_CLIENT_ID": "6gsNBd4mJwXr0LxTBh8VKBOrViK6Aj",
   "MAX_PLAYLIST_SIZE": 10,
   "PREFIX": "set-bot-prefix",
-  "PRUNING": true,
+  "PRUNING": false,
   "LOCALE": "en",
   "STAY_TIME": 1600,
   "DEFAULT_VOLUME": 100
