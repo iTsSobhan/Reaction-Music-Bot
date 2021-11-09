@@ -121,9 +121,9 @@ module.exports = {
           queue.playing = true;
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return i18n.__("common.errorNotChannel");
-          queue.connection.dispatcher.end(true);
+          queue.connection.dispatcher.end();
           queue.textChannel.send(i18n.__mf("play.skipSong", { author: user })).catch(console.error);
-          collector.stop(true);
+          collector.stop();
           break;
 
         case "⏯":
