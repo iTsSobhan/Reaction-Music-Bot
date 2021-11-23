@@ -16,9 +16,7 @@ module.exports = {
       .setDescription(
         `**Montazer chi hasti🤨? Bodo mano be servert add kon🙂😘** \n\n [Invite Link](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot)`
       )
-      .setURL(
-`https://discord.gg/4pUbjscCmA`
-      )
+      .setURL(`https://discord.gg/5GYNec4urW`)
       .setColor("RANDOM");
     return message.channel.send(invite);
   }
