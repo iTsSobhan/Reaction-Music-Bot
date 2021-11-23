@@ -18,7 +18,7 @@ module.exports = {
       .setThumbnail(message.client.user.displayAvatarURL({ format: "png" }))
       .setDescription(i18n.__("help.embedDescription"))
       .setColor("RANDOM")
-      .setFooter(`To get info of each command you can do ${message.client.prefix}help | Create by Sobhan.SRZA#2153 :)`);
+      .setFooter(`To get info of each command you can do ${message.client.prefix}help | Create by Mr.SIN RE#1528 :)`);
     commands.forEach((cmd) => {
       helpEmbed.addField(
         `**${message.client.prefix}${cmd.name}**`,
