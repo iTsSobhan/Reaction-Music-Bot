@@ -26,7 +26,7 @@ module.exports = {
         true
       );
     });
-    helpEmbed.addField(`**Links**`, `**[Support Server](${support_server || "https://discord.gg/4pUbjscCmA"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot)**`)
+    helpEmbed.addField(`**Links**`, `**[Support Server](${support_server || "https://discord.gg/5GYNec4urW"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot)**`)
 
 
     return message.channel.send(helpEmbed).catch(console.error);
