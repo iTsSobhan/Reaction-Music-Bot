@@ -59,10 +59,10 @@ i18n.configure({
  */
 client.on("ready", () => {
   function YousamPower() {
-    let hungry = [`${PREFIX}play` , `${PREFIX}help` ]
-    let Power = Math.floor(Math.random() * hungry.length);
-    client.user.setActivity(hungry[Power], {type: "PLAYING"});//can be LISTENING, WATCHING, PLAYING, STREAMING
-  }; setInterval(YousamPower, 7000)
+    let sezar = [`${PREFIX}play` , `${PREFIX}help` ]
+    let Power = Math.floor(Math.random() * sezar.length);
+    client.user.setActivity(sezar[Power], {type: "PLAYING"});//can be LISTENING, WATCHING, PLAYING, STREAMING
+  }; setInterval(YousamPower, 5000)
     client.user.setStatus("dnd")//can be invesible, online, idle, dnd
 });
 client.on("warn", (info) => console.log(info));
