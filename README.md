@@ -8,13 +8,12 @@
 
 آدرس [یوتوب](https://b2n.ir/srza.-.gamer)
 
-آدرس [دیسکورد](https://discord.gg/q9NXmG62J9)
+آدرس [دیسکورد](https://discord.gg/bNpqrdXNNn)
 
 ## اگه خیلی به موضوعات فیلم و کارتون علاقه دارید پس چنل دومم رو فراموش نکنید👇🏼❤🌹
 
 آدرس [یوتوب](https://b2n.ir/srza._.action)
 
-آدرس [دیسکورد](https://discord.gg/pcYRw54xEP)
 
 ## آموزش نصب و ران کردن بات
 
@@ -70,14 +69,13 @@ Address of the [Aparat](https://www.aparat.com/Sobhan.SRZA)
 
 [YouTube](https://b2n.ir/srza.-.gamer) address
 
-[Discord](https://discord.gg/q9NXmG62J9)address
+[Discord](https://discord.gg/bNpqrdXNNn)address
 
 
 ## If you are very interested in movies and cartoons, then do not forget my second channel 👇🏼❤🌹📺
 
 [YouTube](https://b2n.ir/srza._.action) address
 
-[Discord](https://discord.gg/pcYRw54xEP) address
 
 
 
