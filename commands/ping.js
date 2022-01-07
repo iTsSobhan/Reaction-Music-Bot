@@ -8,7 +8,9 @@ module.exports = {
   cooldown: 10,
   description: i18n.__("ping.description"),
   execute(message) {
-   try {
+    const Discord = require("discord.js");
+    const client = new Discord.Client();
+
             var states = "🟢 Excellent";
             var states2 = "🟢 Excellent";
             var msg = `${Date.now() - message.createdTimestamp}`;
@@ -21,7 +23,7 @@ module.exports = {
             if (Number(api) > 350) states2 = "🔴 Soo Bad";
             if (message.author.bot) return;
             message.channel.send(
-                new MessageEmbed()
+                new Discord.MessageEmbed()
                 .setColor("RANDOM")
                 .setAuthor(message.author.username, message.author.avatarURL())
                 .addField("**Time Taken:**", msg + " ms 📶 | " + states, true)
@@ -29,8 +31,6 @@ module.exports = {
                 .setTimestamp()
                 .setFooter(`Request By ${message.author.tag}`)
             );
-        } catch (err) {
-            return;
-        }
+    
   }
 };
