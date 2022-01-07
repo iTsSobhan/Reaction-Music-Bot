@@ -69,7 +69,6 @@ client.on("ready", () => {
    function srza() {
     let sezar = [`${PREFIX}help`, `${PREFIX}play`,"Mr.SIN RE" , `🔰Sizar Team🔰`,`${client.guilds.cache.size} Servers` ]
     let Power = Math.floor(Math.random() * sezar.length);
-    let statusPlay = ["LISTENING","WATCHING","PLAYING"] //can be LISTENING, WATCHING, PLAYING, STREAMING  
    client.user.setActivity(sezar[Power], {type: "PLAYING"});
         }; setInterval(srza, 3000)
 });
