@@ -1,4 +1,6 @@
-//express
+/**
+*
+*/express
 const express = require('express')
 const app = express();
 const port = 3000
@@ -69,7 +71,7 @@ client.on("ready", () => {
    function srza() {
     let sezar = [`${PREFIX}help`, `${PREFIX}play`,"Mr.SIN RE" , `🔰Sizar Team🔰`,`${client.guilds.cache.size} Servers` ]
     let Power = Math.floor(Math.random() * sezar.length);
-   client.user.setActivity(sezar[Power], {type: "PLAYING"});
+   client.user.setActivity(sezar[Power], {type: "PLAYING"});//can be LISTENING, WATCHING, PLAYING, STREAMING  
         }; setInterval(srza, 3000)
 });
 
