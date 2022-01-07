@@ -22,7 +22,7 @@ module.exports = {
             if (message.author.bot) return;
             message.channel.send(
                 new MessageEmbed()
-                .setColor("#2F3136")
+                .setColor("RANDOM")
                 .setAuthor(message.author.username, message.author.avatarURL())
                 .addField("**Time Taken:**", msg + " ms 📶 | " + states, true)
                 .addField("**WebSocket:**", api + " ms 📶 | " + states2, true)
