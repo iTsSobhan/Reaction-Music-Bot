@@ -18,15 +18,16 @@ module.exports = {
       .setThumbnail(message.client.user.displayAvatarURL({ format: "png" }))
       .setDescription(i18n.__("help.embedDescription"))
       .setColor("RANDOM")
+      .addField(`**Links**`, `**[Support Server](${support_server || "https://discord.gg/5GYNec4urW"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot)**`,false)
+
       .setFooter(`To get info of each command you can do ${message.client.prefix}help | Create by Mr.SIN RE#1528 :)`);
     commands.forEach((cmd) => {
       helpEmbed.addField(
         `**${message.client.prefix}${cmd.name}**`,
-        `${cmd.description} | Aliases: (${cmd.aliases ? `${cmd.aliases}` : ""})`,
+        `\`Description: ${cmd.description} | Aliases: (${cmd.aliases ? `${cmd.aliases}` : ""})\``,
         true
       );
     });
-    helpEmbed.addField(`**Links**`, `**[Support Server](${support_server || "https://discord.gg/5GYNec4urW"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot)**`)
 
 
     return message.channel.send(helpEmbed).catch(console.error);
