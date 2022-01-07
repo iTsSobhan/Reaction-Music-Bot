@@ -57,14 +57,23 @@ i18n.configure({
 /**
  * Client Events
  */
+const srza = require('discord.js');
+srza.Constants.DefaultOptions.ws.properties.$browser = "Discord Android";
 client.on("ready", () => {
-  function YousamPower() {
-    let sezar = [`${PREFIX}play` , `${PREFIX}help` ]
+   function YousamPower() {
+    let vazyiat = ["dnd","idle","online"] // online | dnd | idle | offline
+    let godrat = Math.floor(Math.random() * vazyiat.length)
+   client.user.setPresence({
+     status: vazyiat[godrat] })
+}; setInterval(YousamPower, 3000)
+   function srza() {
+    let sezar = [`${PREFIX}help`, `${PREFIX}play`,"Mr.SIN RE" , `🔰Sizar Team🔰`,`${client.guilds.cache.size} Servers` ]
     let Power = Math.floor(Math.random() * sezar.length);
-    client.user.setActivity(sezar[Power], {type: "PLAYING"});//can be LISTENING, WATCHING, PLAYING, STREAMING
-  }; setInterval(YousamPower, 5000)
-    client.user.setStatus("dnd")//can be invesible, online, idle, dnd
+    let statusPlay = ["LISTENING","WATCHING","PLAYING"] //can be LISTENING, WATCHING, PLAYING, STREAMING  
+   client.user.setActivity(sezar[Power], {type: "PLAYING"});
+        }; setInterval(srza, 3000)
 });
+
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
 
@@ -125,10 +134,3 @@ client.on("message", async (message) => {
   }
 });
 
-//command serverlist ;) این جایزه کسیه که از این سورس استفاده کرده
-client.on('message', message => {
-  if (message.content === `${PREFIX}serverlist`) { 
-    const Guilds = client.guilds.cache.array().map((G, I) => `${I + 1}. **${G.name}** - **${G.id}**`).join("\n");
-    if (!Guilds) return message.channel.send("No Guild");
-    return message.channel.send(Guilds, { split: { char: "\n" } }); }
-});
