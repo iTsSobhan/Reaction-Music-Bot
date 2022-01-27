@@ -78,6 +78,7 @@ client.on("ready", () => {
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
 
+
 /**
  * Import all commands
  */
@@ -90,11 +91,13 @@ for (const file of commandFiles) {
 client.on("message", async (message) => {
   if (message.author.bot) return;
   if (!message.guild) return;
-
-  const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
+const db = require("quick.db");
+    var prefix = await db.fetch(`prefix_${message.guild.id}`);
+    if (prefix == null) prefix = client.prefix;
+  const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`);
   if (!prefixRegex.test(message.content)) return;
 
-  const [, matchedPrefix] = message.content.match(prefixRegex);
+  const [ matchedPrefix] = message.content.match(prefixRegex);
 
   const args = message.content.slice(matchedPrefix.length).trim().split(/ +/);
   const commandName = args.shift().toLowerCase();
@@ -128,7 +131,7 @@ client.on("message", async (message) => {
   setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
   try {
-    command.execute(message, args);
+    command.execute(message,args);
   } catch (error) {
     console.error(error);
     message.reply(i18n.__("common.errorCommend")).catch(console.error);
