@@ -1,5 +1,5 @@
 /**
-* express
+ * Express
 */
 const express = require('express')
 const app = express();
@@ -12,14 +12,14 @@ console.log(`Your app is listening a http://localhost/${port}`)
 /**
  * Module Imports
  */
-const { Client, Collection } = require("discord.js");
+const { Client , Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
 const { TOKEN, PREFIX, LOCALE } = require("./util/AdUtil");
 const path = require("path");
 const i18n = require("i18n");
 
-const client = new Client({
+const client  = new Client({
   disableMentions: "everyone",
   restTimeOffset: 0
 });
@@ -73,11 +73,11 @@ client.on("ready", () => {
     let Power = Math.floor(Math.random() * sezar.length);
    client.user.setActivity(sezar[Power], {type: "PLAYING"});//can be LISTENING, WATCHING, PLAYING, STREAMING  
         }; setInterval(srza, 3000)
+  console.log(`${client.user.tag} is online`)
 });
 
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
-
 
 /**
  * Import all commands
@@ -92,8 +92,9 @@ client.on("message", async (message) => {
   if (message.author.bot) return;
   if (!message.guild) return;
 const db = require("quick.db");
-    var prefix = await db.fetch(`prefix_${message.guild.id}`);
-    if (prefix == null) prefix = client.prefix;
+  const Discord = require("discord.js");
+  const bot = new Discord.Client();
+    var prefix = await db.fetch(`prefix_${message.guild.id}`)||client.prefix;
   const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`);
   if (!prefixRegex.test(message.content)) return;
 
@@ -131,7 +132,7 @@ const db = require("quick.db");
   setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
   try {
-    command.execute(message,args);
+    command.execute(message,args,bot);
   } catch (error) {
     console.error(error);
     message.reply(i18n.__("common.errorCommend")).catch(console.error);

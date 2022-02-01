@@ -19,7 +19,7 @@ module.exports = {
                 message.channel.send(pererrorEmbed)
                 
                 
-            }
+            }else
             var prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`);
             if (prefix == null) prefix = PREFIX;
             var newPrefix = args.join(' ')

@@ -198,7 +198,7 @@ module.exports = {
           queue.songs = [];
           queue.textChannel.send(i18n.__mf("play.stopSong", { author: user })).catch(console.error);
           try {
-            queue.connection.dispatcher.end(true);
+            queue.connection.dispatcher.end();
           } catch (error) {
             console.error(error);
             queue.connection.disconnect();

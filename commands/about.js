@@ -1,4 +1,4 @@
-const { canModifyQueue, LOCALE } = require("../util/AdUtil");
+const  LOCALE  = require("../util/AdUtil");
 const i18n = require("i18n");
 
 i18n.setLocale(LOCALE);
@@ -7,10 +7,10 @@ module.exports = {
   name: "about",
   aliases: ["info","bot info"],
   description: i18n.__('show you about bot'),
-  execute(message) {
+  execute(message,client) {
 const Discord = require("discord.js");
 const moment = require("moment");
-const client = new Discord.Client();
+//const client = new Discord.Client();
     let infoEmbed = new Discord.MessageEmbed()
       infoEmbed.setColor("RANDOM");
       infoEmbed.setTitle(`About \`${message.client.user.username}\``);

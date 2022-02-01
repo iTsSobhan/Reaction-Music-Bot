@@ -13,7 +13,7 @@ async  execute(message) {
     let commands = message.client.commands.array();
 
       const db = require("quick.db");
-    var prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`);
+    var prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`)|| PREFIX;
     
     let helpEmbed = new MessageEmbed()
       .setAuthor(`Requested by ${message.author.username}`, `${message.author.displayAvatarURL()}`)
@@ -21,7 +21,7 @@ async  execute(message) {
       .setThumbnail(message.client.user.displayAvatarURL({ format: "png" }))
       .setDescription(i18n.__("help.embedDescription"))
       .setColor("RANDOM")
-      .addField(`**Links**`, `**[Support Server](${support_server || "https://discord.gg/5GYNec4urW"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot)**`,false)
+      helpEmbed.addField(`**Links**`, `**[Support Server](${support_server || "https://discord.gg/5GYNec4urW"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot)**`,false)
 
       .setFooter(`To get info of each command you can do ${prefix}help | Create by Mr.SIN RE#1528 :)`);
     commands.forEach((cmd) => {
