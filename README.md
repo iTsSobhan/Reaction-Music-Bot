@@ -308,6 +308,6 @@ Examples: `1` or `1,2,3`
 ![reactions](https://cdn.discordapp.com/attachments/906688516140961802/938066570691887166/Music-CMD_-_Google_Chrome_2_1_2022_5_10_50_PM.png)
 
 
-Main Credits go to [@Sobhan-SRZA](https://github.com/Sobhan-SRZA/) for making evobot successfully the best music bot...😍
+Main Credits go to [@Sobhan-SRZA](https://github.com/Sobhan-SRZA/) for making DJ BOY successfully the best music bot...😍
 Get evobot repo here - 
 https://github.com/Sobhan-SRZA/Reaction-Music-Bot
