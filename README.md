@@ -2,7 +2,7 @@
 
 
 
-**For replit users**-**Tap on this -**[![Use on Replit](https://repl.it/badge/github/Sobhan-SRZA/Reaction-Music-Bot/)]
+**For replit users**-**Tap on this -**[![Use on Replit](https://repl.it/badge/github/Sobhan-SRZA/Reaction-Music-Bot/)](https://repl.it/github/Sobhan-SRZA/Reaction-Music-Bot/)
 
 ## آدرس های من در فضای مجازی👇🏼🙃
 آدرس [توییچ](https://www.twitch.tv/sobhan_srza)
