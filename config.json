@@ -3,6 +3,7 @@
   "SOUNDCLOUD_CLIENT_ID": "6gsNBd4mJwXr0LxTBh8VKBOrViK6Aj",
   "MAX_PLAYLIST_SIZE": 10,
   "PREFIX": "BOT_PREFIX",
+  "support_server": "YOUR_SERVER_LINK",
   "PRUNING": false,
   "LOCALE": "en",
   "STAY_TIME": 1600,
