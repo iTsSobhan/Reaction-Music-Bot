@@ -1,12 +1,8 @@
-**For Herokucd users** -
+**For Herokucd users**-**Tap on this -**[![Deploy on Herokucd](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sobhan-SRZA/Reaction-Music-Bot/)
 
-**Tap on this --**
-[![Deploy on Herokucd](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sobhan-SRZA/Reaction-Music-Bot/)
 
-**For replit users** -
 
-**Tap on this --**
-[![Use on Replit](https://repl.it/badge/github/ZeroDiscord/EconomyBot)](https://github.com/Sobhan-SRZA/Reaction-Music-Bot/)
+**For replit users**-**Tap on this -**[![Use on Replit](https://repl.it/badge/github/Sobhan-SRZA/Reaction-Music-Bot/)]
 
 ## آدرس های من در فضای مجازی👇🏼🙃
 آدرس [توییچ](https://www.twitch.tv/sobhan_srza)
