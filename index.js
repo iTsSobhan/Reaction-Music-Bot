@@ -146,7 +146,7 @@ client.on('message', async message => {
 if(!message.guild || message.author.bot) return;
 if (message.content === `${PREFIX}prefix`) {
               var prf = await require('quick.db').fetch(`prefix_${message.guild.id}`)||PREFIX;
-                   let errorprefixEmbed = new Discord.MessageEmbed()
+                   let errorprefixEmbed = new srza.MessageEmbed()
                               .setColor("RANDOM")
                            .setThumbnail(client.user.displayAvatarURL())
                                .setTimestamp(Date.now())
