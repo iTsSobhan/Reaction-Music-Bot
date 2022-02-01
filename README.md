@@ -74,7 +74,7 @@ npm install
 
 🚨🚨 **تعهد کردن توکن خود به دسترسی دیگران یا عمومی کردن آن اکیداً ممنوع است. بنابراین، توکن خود را به هیچ قیمتی به اشتراک نگذارید و از .gitignore برای مخفی کردن اسرار استفاده نکنید** 🚨🚨
 
-``json
+```json
 {
   "YOUTUBE_API_KEY": "AIzaSyAheHfo0S94kDWIs2nnfPQP4Kf6c8febrI"،
   "SOUNDCLOUD_CLIENT_ID": "6gsNBd4mJwXr0LxTBh8VKBOrViK6Aj"،
@@ -149,7 +149,7 @@ npm install
 ![Reactions](https://cdn.discordapp.com/attachments/906688516140961802/938066570691887166/Music-CMD_-_Google_Chrome_2_1_2022_5_10_50_PM.png)
 
 
-اعتبار اصلی به [Sobhan-SRZA](https://github.com/Sobhan-SRZA/) برای ساخت DJ BOY با موفقیت بهترین ربات موسیقی...😍
+اعتبار اصلی به [Sobhan-SRZA@](https://github.com/Sobhan-SRZA/) برای ساخت DJ BOY با موفقیت بهترین ربات موسیقی...😍
 مخزن DJ BOY را از اینجا دریافت کنید -
 https://github.com/Sobhan-SRZA/Reaction-Music-Bot
 
@@ -308,6 +308,6 @@ Examples: `1` or `1,2,3`
 ![reactions](https://cdn.discordapp.com/attachments/906688516140961802/938066570691887166/Music-CMD_-_Google_Chrome_2_1_2022_5_10_50_PM.png)
 
 
-Main Credits go to [@iCrawl](https://github.com/Sobhan-SRZA/) for making evobot successfully the best music bot...😍
+Main Credits go to [@Sobhan-SRZA](https://github.com/Sobhan-SRZA/) for making evobot successfully the best music bot...😍
 Get evobot repo here - 
 https://github.com/Sobhan-SRZA/Reaction-Music-Bot
