@@ -76,11 +76,11 @@ npm install
 
 ```json
 {
-  "YOUTUBE_API_KEY": "AIzaSyAheHfo0S94kDWIs2nnfPQP4Kf6c8febrI"،
-  "SOUNDCLOUD_CLIENT_ID": "6gsNBd4mJwXr0LxTBh8VKBOrViK6Aj"،
-  "support_server": "YOUR_SERVER_LINK"،
-  "MAX_PLAYLIST_SIZE": 10،
-  "PREFIX": "BOT_REFIX"،
+  "YOUTUBE_API_KEY": "AIzaSyAheHfo0S94kDWIs2nnfPQP4Kf6c8febrI",
+  "SOUNDCLOUD_CLIENT_ID": "6gsNBd4mJwXr0LxTBh8VKBOrViK6Aj",
+  "support_server": "YOUR_SERVER_LINK",
+  "MAX_PLAYLIST_SIZE": 10,
+  "PREFIX": "BOT_REFIX",
   "PRUNING": false,
   "LOCALE": "en",
   "STAY_TIME": 30،
