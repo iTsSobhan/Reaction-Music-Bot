@@ -1,8 +1,7 @@
-**For Herokucd users**-**Tap on this -**[![Deploy on Herokucd](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sobhan-SRZA/Reaction-Music-Bot/)
+[![Deploy on Herokucd](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sobhan-SRZA/Reaction-Music-Bot/)
 
+[![Use on Replit](https://repl.it/badge/github/Sobhan-SRZA/Reaction-Music-Bot/)](https://repl.it/github/Sobhan-SRZA/Reaction-Music-Bot/)
 
-
-**For replit users**-**Tap on this -**[![Use on Replit](https://repl.it/badge/github/Sobhan-SRZA/Reaction-Music-Bot/)](https://repl.it/github/Sobhan-SRZA/Reaction-Music-Bot/)
 
 ## آدرس های من در فضای مجازی👇🏼🙃
 آدرس [توییچ](https://www.twitch.tv/sobhan_srza)
@@ -34,9 +33,7 @@
 سپس با توجه به کد زیر به ترتیب پرفیکس و توکن بات رو اد کنید👇🏼🙃
 
 ```js
-
 TOKEN="Youre-bot-token"
-PREFIX="Youre-bot-prefix"
 ```
 
 در بخش
