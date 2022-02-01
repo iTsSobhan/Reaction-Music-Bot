@@ -18,12 +18,11 @@ const { join } = require("path");
 const { TOKEN, PREFIX, LOCALE } = require("./util/AdUtil");
 const path = require("path");
 const i18n = require("i18n");
-
 const client  = new Client({
   disableMentions: "everyone",
   restTimeOffset: 0
 });
-
+require('discord-buttons')(client);
 client.login(process.env.TOKEN);
 client.commands = new Collection();
 client.prefix = PREFIX;
