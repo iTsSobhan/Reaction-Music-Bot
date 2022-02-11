@@ -83,7 +83,7 @@ npm install
   "PREFIX": "BOT_REFIX",
   "PRUNING": false,
   "LOCALE": "en",
-  "STAY_TIME": 30،
+  "STAY_TIME": 30,
   "DEFAULT_VOLUME": 100
 }
 ```
