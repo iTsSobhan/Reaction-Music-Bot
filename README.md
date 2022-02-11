@@ -62,7 +62,7 @@ npm install
 
 **روی این ضربه بزنید --**
 
-[![استفاده در Replit](https://repl.it/badge/github/Sobhan-SRZA/Reaction-Music-Bot/)](https://repl.it/github/Sobhan-SRZA/Reaction -Music-Bot/)
+[![استفاده در Replit](https://repl.it/badge/github/Sobhan-SRZA/Reaction-Music-Bot/)](https://repl.it/github/Sobhan-SRZA/Reaction-Music-Bot/)
 
 ```
 (npm i) را در کنسول تایپ کنید
