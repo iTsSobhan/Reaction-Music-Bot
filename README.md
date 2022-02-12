@@ -1,3 +1,4 @@
+# زبان فارسی
 [![Deploy on Herokucd](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sobhan-SRZA/Reaction-Music-Bot/)
 
 [![Use on Replit](https://repl.it/badge/github/Sobhan-SRZA/Reaction-Music-Bot/)](https://repl.it/github/Sobhan-SRZA/Reaction-Music-Bot/)
@@ -156,6 +157,9 @@ https://github.com/Sobhan-SRZA/Reaction-Music-Bot
 
 
 ## Language EN
+[![Deploy on Herokucd](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sobhan-SRZA/Reaction-Music-Bot/)
+
+[![Use on Replit](https://repl.it/badge/github/Sobhan-SRZA/Reaction-Music-Bot/)](https://repl.it/github/Sobhan-SRZA/Reaction-Music-Bot/)
 
 ## My addresses in cyberspace 👇🏼🙃📡
 
@@ -171,9 +175,6 @@ Address of the [Aparat](https://www.aparat.com/Sobhan.SRZA)
 [YouTube](https://b2n.ir/srza.-.gamer) address
 
 [Discord](https://discord.gg/bNpqrdXNNn)address
-
-
-## If you are very interested in movies and cartoons, then do not forget my second channel 👇🏼❤🌹📺
 
 [YouTube](https://b2n.ir/srza._.action) address
 
