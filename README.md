@@ -310,3 +310,6 @@ Examples: `1` or `1,2,3`
 Main Credits go to [@Sobhan-SRZA](https://github.com/Sobhan-SRZA/) for making DJ BOY successfully the best music bot...😍
 Get evobot repo here - 
 https://github.com/Sobhan-SRZA/Reaction-Music-Bot
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Sobhan-SRZA&repo=Reaction-Music-Bot&theme=dracula)](https://github.com/Sobhan-SRZA/Reaction-Music-Bot)
+
