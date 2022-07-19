@@ -16,6 +16,21 @@
 	"invite": {
 		"description": "Send bot invite link"
 	},
+	"about": {
+		"description": "Send you some information about bot."
+	},
+  "setprefix":{
+    "description":"Change bot prefix in server"
+  },
+	"report": {
+		"description": "For report bot bugs to developers :)"
+	},
+	"serverlist": {
+		"description": "List of all servers bot join."
+	},
+	"disconnect": {
+		"description": "Disconnect on the voice."
+	},
 	"loop": {
 		"description": "Toggle music loop",
 		"errorNotQueue": "There is nothing playing.",
@@ -60,7 +75,7 @@
 		"cantJoinChannel": "Could not join the channel: {error}",
 		"queueEnded": "❌ Music queue ended.",
 		"queueError": "Error: {error}",
-		"startedPlaying": "🎶 Started playing: **{title}** {url}",
+		"startedPlaying": "🎶 Started playing: **{title}** ",
 		"skipSong": "<@{author}> ⏩ skipped the song",
 		"pauseSong": "<@{author}> ⏸ paused the music.",
 		"resumeSong": "<@{author}> ▶ resumed the music!",
@@ -160,10 +175,12 @@
 		"enabled": "**enabled**",
 		"disabled": "**disabled**",
 		"errorNotChannel": "You need to join a voice channel first!",
-		"cooldownMessage": "please wait {time} more second(s) before reusing the `{name}` command.",
-		"errorCommend": "There was an error executing that command."
+    "unknowCommand": "{alert}| this command `{name}` is unknow for me.",
+		"cooldownMessage": "{alert}| please wait {time} more second(s) before reusing the `{name}` command.",
+		"errorCommend": "{alert}| There was an error executing that command."
 	},
 	"show you about bot": "show you about bot",
 	"disconnect at the voice": "disconnect at the voice",
-	"list of all servers bot join": "list of all servers bot join"
+	"list of all servers bot join": "list of all servers bot join",
+	"Change bot prefix in server": "Change bot prefix in server"
 }

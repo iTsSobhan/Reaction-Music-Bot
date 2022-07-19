@@ -24,7 +24,7 @@ module.exports = {
 
     if (!song) {
       setTimeout(function () {
-        if (queue.connection.dispatcher && message.guild.me.voice.channel) return;
+        if(queue.connection.dispatcher && message.guild.me.voice.channel) return;
         queue.channel.leave();
         queue.textChannel.send(i18n.__("play.leaveChannel"));
       }, STAY_TIME * 3);
@@ -90,10 +90,14 @@ module.exports = {
         .setAuthor("Music is playing", "https://cdn.discordapp.com/attachments/865859167557255178/897552744402026556/undefined_-_Imgur.gif")
         .setTitle("Now Playing")
         .setURL(`${song.url}`)
-        .setThumbnail(message.client.user.displayAvatarURL({ format: "png" }))
-        .setDescription(i18n.__mf("play.startedPlaying", { title: song.title}))
-        .setFooter(`Requested by ${message.author.username}`,`${message.author.displayAvatarURL()}`)
-        .setColor("RANDOM")
+        //.setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
+        //.setImage(`${song.img}`)
+        .setThumbnail(song.img)
+        .addField("Name", i18n.__mf("play.startedPlaying", { title: song.title}), true)
+        .addField("Duration", song.duration, true)
+        .addField("Requested by", song.req, true)
+        .setFooter(`Views:${song.views}\n${song.ago} \nCreated by Mr.SIN RE#1528 :)`,`${message.author.displayAvatarURL({ dynamic: true })}`)
+        .setColor("#2F3136")
         .setTimestamp()
       );
       await playingMessage.react("⏭");

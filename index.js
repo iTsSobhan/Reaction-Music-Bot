@@ -12,22 +12,25 @@ console.log(`Your app is listening a http://localhost/${port}`)
 /**
  * Module Imports
  */
-const { Client , Collection } = require("discord.js");
-const { readdirSync } = require("fs");
+const Discord = require("discord.js");
+Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android";
+const fs = require("fs");
 const { join } = require("path");
+const clc = require("cli-color");
 const { TOKEN, PREFIX, LOCALE } = require("./util/AdUtil");
 const path = require("path");
 const i18n = require("i18n");
-const client  = new Client({
+const client  = new Discord.Client({
   disableMentions: "everyone",
   restTimeOffset: 0
 });
 require('discord-buttons')(client);
-client.login(process.env.TOKEN);
-client.commands = new Collection();
+client.config = require('./config');
+client.login(TOKEN);
+client.commands = new Discord.Collection();
 client.prefix = PREFIX;
 client.queue = new Map();
-const cooldowns = new Collection();
+client.cooldowns = new Discord.Collection();
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 i18n.configure({
@@ -55,104 +58,96 @@ i18n.configure({
   }
 });
 
-/**
- * Client Events
- */
-const srza = require('discord.js');
-srza.Constants.DefaultOptions.ws.properties.$browser = "Discord Android";
-client.on("ready", () => {
-   function YousamPower() {
-    let vazyiat = ["dnd","idle","online"] // online | dnd | idle | offline
-    let godrat = Math.floor(Math.random() * vazyiat.length)
-   client.user.setPresence({
-     status: vazyiat[godrat] })
-}; setInterval(YousamPower, 3000)
-   function srza() {
-    let sezar = [`${PREFIX}help`, `${PREFIX}play`,"Mr.SIN RE" , `🔰Sizar Team🔰`,`${client.guilds.cache.size} Servers` ]
-    let Power = Math.floor(Math.random() * sezar.length);
-   client.user.setActivity(sezar[Power], {type: "PLAYING"});//can be LISTENING, WATCHING, PLAYING, STREAMING  
-        }; setInterval(srza, 3000)
-  console.log(`${client.user.tag} is online`)
-});
-
-client.on("warn", (info) => console.log(info));
-client.on("error", console.error);
 
 /**
  * Import all commands
  */
-const commandFiles = readdirSync(join(__dirname, "commands")).filter((file) => file.endsWith(".js"));
-for (const file of commandFiles) {
-  const command = require(join(__dirname, "commands", `${file}`));
-  client.commands.set(command.name, command);
+fs.readdirSync('./commands').forEach(dirs => {
+    const commands = fs.readdirSync(`./commands/${dirs}`).filter(files => files.endsWith('.js'));
+    for (const file of commands) {
+        const command = require(`./commands/${dirs}/${file}`);
+        client.commands.set(command.name.toLowerCase(), command);
+    };
+});
+try {
+    const stringlength = 69;
+    console.log("\n")
+    console.log(clc.yellowBright(`     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`))
+    console.log(clc.yellowBright(`     ┃ `) + " ".repeat(-1 + stringlength - ` ┃ `.length) + clc.yellowBright("┃"))
+    console.log(clc.yellowBright(`     ┃ `) + clc.greenBright(`                   ${clc.magentaBright(client.commands.size)} Commands Is Loaded!!`) + " ".repeat(-1 + stringlength - ` ┃ `.length - `                   ${client.commands.size} Commands Is Loaded!!`.length) + clc.yellowBright("┃"))
+    console.log(clc.yellowBright(`     ┃ `) + " ".repeat(-1 + stringlength - ` ┃ `.length) + clc.yellowBright("┃"))
+    console.log(clc.yellowBright(`     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`))
+  } catch { /* */ }
+  try{
+    const stringlength = 69;
+    var FilesLength = new Map();
+    fs.readdirSync('./events').forEach(dirs => {
+      const events = fs.readdirSync(`./events/${dirs}`).filter(files => files.endsWith('.js'));
+      for (const file of events) {
+          const event = require(`./events/${dirs}/${file}`);
+          FilesLength.set(event);
+          client.on(file.split(".")[0], event.bind(null, client));
+      };
+  });
+try {
+    console.log("\n")
+    console.log(clc.greenBright(`     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`))
+    console.log(clc.greenBright(`     ┃ `) + " ".repeat(-1 + stringlength - ` ┃ `.length) + clc.greenBright("┃"))
+    console.log(clc.greenBright(`     ┃ `) + clc.cyanBright(`                   Welcome to DJ Boy!`) + " ".repeat(-1 + stringlength - ` ┃ `.length - `                   Welcome to DJ Boy!`.length) + clc.greenBright("┃"))
+    console.log(clc.greenBright(`     ┃ `) + " ".repeat(-1 + stringlength - ` ┃ `.length) + clc.greenBright("┃"))
+    console.log(clc.greenBright(`     ┃ `) + clc.cyanBright(`             /-/ By Mr.SIN RE AND SIZAR Team /-/`) + " ".repeat(-1 + stringlength - ` ┃ `.length - `             /-/ By Mr.SIN RE AND SIZAR Team /-/`.length) + clc.greenBright("┃"))
+    console.log(clc.greenBright(`     ┃ `) + " ".repeat(-1 + stringlength - ` ┃ `.length) + clc.greenBright("┃"))
+    console.log(clc.greenBright(`     ┃ `) + clc.yellowBright(`               /-/ Discord: Mr.SIN RE#1528  /-/`) + " ".repeat(-1 + stringlength - ` ┃ `.length - `               /-/ Discord: Mr.SIN RE#1528  /-/`.length) + clc.greenBright("┃"))
+    console.log(clc.greenBright(`     ┃ `) + " ".repeat(-1 + stringlength - ` ┃ `.length) + clc.greenBright("┃"))
+    console.log(clc.greenBright(`     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`))
+    console.log("\n")
+  } catch { /* */ }
+  try {
+    console.log("\n")
+    console.log(clc.yellowBright(`     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`))
+    console.log(clc.yellowBright(`     ┃ `) + " ".repeat(-1 + stringlength - ` ┃ `.length) + clc.yellowBright("┃"))
+    console.log(clc.yellowBright(`     ┃ `) + clc.greenBright(`                     Logging into the BOT...`) + " ".repeat(-1 + stringlength - ` ┃ `.length - `                     Logging into the BOT...`.length) + clc.yellowBright("┃"))
+    console.log(clc.yellowBright(`     ┃ `) + " ".repeat(-1 + stringlength - ` ┃ `.length) + clc.yellowBright("┃"))
+    console.log(clc.yellowBright(`     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`))
+    console.log("\n")
+  } catch { /* */ }
+  try {
+    console.log("\n")
+    console.log(clc.yellowBright(`     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`))
+    console.log(clc.yellowBright(`     ┃ `) + " ".repeat(-1 + stringlength - ` ┃ `.length) + clc.yellowBright("┃"))
+    console.log(clc.yellowBright(`     ┃ `) + clc.greenBright(`                   ${clc.redBright(FilesLength.size)} Events Is Loaded!!`) + " ".repeat(-1 + stringlength - ` ┃ `.length - `                   ${FilesLength.size} Events Is Loaded!!`.length) + clc.yellowBright("┃"))
+    console.log(clc.yellowBright(`     ┃ `) + " ".repeat(-1 + stringlength - ` ┃ `.length) + clc.yellowBright("┃"))
+    console.log(clc.yellowBright(`     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`))
+    console.log("\n")
+  } catch { /* */ }
+} catch (e) {
+  console.log(clc.redBright(String(e.stack)))
 }
 
-client.on("message", async (message) => {
-  if (message.author.bot) return;
-  if (!message.guild) return;
-const db = require("quick.db");
-  const Discord = require("discord.js");
-  const bot = new Discord.Client();
-    var prefix = await db.fetch(`prefix_${message.guild.id}`)||client.prefix;
-  const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`);
-  if (!prefixRegex.test(message.content)) return;
-
-  const [ matchedPrefix] = message.content.match(prefixRegex);
-
-  const args = message.content.slice(matchedPrefix.length).trim().split(/ +/);
-  const commandName = args.shift().toLowerCase();
-
-  const command =
-    client.commands.get(commandName) ||
-    client.commands.find((cmd) => cmd.aliases && cmd.aliases.includes(commandName));
-
-  if (!command) return;
-
-  if (!cooldowns.has(command.name)) {
-    cooldowns.set(command.name, new Collection());
-  }
-
-  const now = Date.now();
-  const timestamps = cooldowns.get(command.name);
-  const cooldownAmount = (command.cooldown || 1) * 1000;
-
-  if (timestamps.has(message.author.id)) {
-    const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
-
-    if (now < expirationTime) {
-      const timeLeft = (expirationTime - now) / 1000;
-      return message.reply(
-        i18n.__mf("common.cooldownMessage", { time: timeLeft.toFixed(1), name: command.name })
-      );
-    }
-  }
-
-  timestamps.set(message.author.id, now);
-  setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
-
-  try {
-    command.execute(message,args,bot);
-  } catch (error) {
-    console.error(error);
-    message.reply(i18n.__("common.errorCommend")).catch(console.error);
-  }
-});
-
-/**
-* Prefix of Bot
+/** 
+ * Anti Crash 
 */
-client.on('message', async message => {
-if(!message.guild || message.author.bot) return;
-if (message.content === `${PREFIX}prefix`) {
-              var prf = await require('quick.db').fetch(`prefix_${message.guild.id}`)||PREFIX;
-                   let errorprefixEmbed = new srza.MessageEmbed()
-                              .setColor("RANDOM")
-                           .setThumbnail(client.user.displayAvatarURL())
-                               .setTimestamp(Date.now())
-                               .setAuthor(`prefix of ${client.user.tag} shows👌🏻`,client.user.displayAvatarURL())
-                                .setFooter(`prefix shows to ${message.author.tag} |`,message.author.displayAvatarURL())
-                               .setDescription(`Prefix Dar In Server **${prf}** ASt`)
-                message.channel.send(errorprefixEmbed)
-
-    }
-})
+    console.log("\n")
+    console.log(clc.red(`Starting AntiCrash`));
+    process.on('unhandledRejection', (reason, promise) => {
+            console.log(clc.redBright('=== [antiCrash] :: [unhandledRejection] :: [start] ==='));
+            console.log(reason);
+            console.log(clc.redBright('=== [antiCrash] :: [unhandledRejection] :: [end] ==='));
+    });
+    process.on('rejectionHandled', (promise) => {
+            console.log(clc.redBright('=== [antiCrash] :: [rejectionHandled] :: [start] ==='));
+            console.log(promise);
+            console.log(clc.redBright('=== [antiCrash] :: [rejectionHandled] :: [end] ==='));
+    })
+    process.on("uncaughtException", (err, origin) => {
+            console.log(clc.redBright('=== [antiCrash] :: [uncaughtException] :: [start] ==='));
+            console.log(err);
+            console.log(clc.redBright('=== [antiCrash] :: [uncaughtException] :: [end] ==='));
+    });
+    process.on('uncaughtExceptionMonitor', (err, origin) => {
+            console.log(clc.redBright('=== [antiCrash] :: [uncaughtExceptionMonitor] :: [start] ==='));
+            console.log(err);
+            console.log(clc.redBright('=== [antiCrash] :: [uncaughtExceptionMonitor] :: [end] ==='));
+    });
+    console.log(clc.greenBright(`AntiCrash Started`));
+    console.log("\n")
